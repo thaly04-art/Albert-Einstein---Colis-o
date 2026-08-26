@@ -6,7 +6,7 @@
 - [ Thalyta ] -   Matrícula: [ 202520590011 ] - [ Gerente de Projeto (Scrum Master)/ Roteirista ]
 - [ Julia   ] -   Matrícula: [ 202520656911 ] - [ Desenvolvedor/ Animador 1 ]
 - [ Gabriel R.] - Matrícula: [ 202520590611 ] - [ Desenvolvedor/ Animador 2 ]
-- [ Felipe R. ] - Matrícula: [               ] - [ Editor de Audio/ Vídeo e Divulgação ]
+- [ Felipe R. ] - Matrícula: [ 202610075411 ] - [ Editor de Audio/ Vídeo e Divulgação ]
 
 **Nome do Grupo:** Albert Einstein
 **Tema:** Colisão   
@@ -79,6 +79,355 @@ Ao final do vídeo, o espectador deverá ser capaz de:
 -Diferenciar uma colisão elástica de uma colisão inelástica.
 
 ## 6. Storyboard — Cena a Cena
+
+## Informações gerais
+
+**Tema:** Colisão Elástica em uma Dimensão (1D)  
+**Grupo:** Albert Einstein  
+**Ano:** 2026  
+**Duração estimada:** 4–5 minutos  
+
+---
+
+## CENA 1 — INTRODUÇÃO
+
+**Tempo estimado:** 25 segundos
+
+### Visual
+
+Apresentação do tema escrito no quadro negro:
+
+> **COLISÃO ELÁSTICA EM UMA DIMENSÃO (1D) ENTRE DOIS CORPOS**
+
+Albert Einstein também aparece se apresentando e demonstrando dois objetos representados como **carrinhos de brinquedo** sobre uma mesa.
+
+**Paisagem:** Sala de aula, com um quadro negro ao fundo e uma mesa marrom onde estão os dois carrinhos.
+
+### Narração
+
+> “Boa tarde, meu nome é Albert Einstein e hoje vamos compreender o que são as colisões. De forma mais específica, veremos as colisões elásticas em uma dimensão de forma prática, com esses dois carrinhos.”
+
+### Elementos visuais
+
+- Albert Einstein;
+- Quadro negro;
+- Dois carrinhos de brinquedo;
+- Título do vídeo;
+- Mesa onde os carrinhos estarão posicionados.
+
+### Transição
+
+Os carrinhos começam a se movimentar em direção um ao outro.
+
+---
+
+## CENA 2 — ANTES DA COLISÃO
+
+**Tempo estimado:** 30 segundos
+
+### Visual
+
+Os dois carrinhos são mostrados se movimentando em direção um ao outro. No quadro negro, são indicadas suas respectivas **massas** e **velocidades**.
+
+Após apresentar essas grandezas, Einstein começa a explicar o conceito de **energia cinética**.
+
+Ele escreve no quadro:
+
+> **Ec = ½mv²**
+
+### Narração
+
+> “Antes de a colisão ocorrer, é preciso observar quais são as massas e as velocidades de cada objeto, grandezas necessárias para entendermos o que acontece após a colisão. Além disso, podemos determinar a energia cinética de cada corpo, que é a energia associada ao seu movimento e pode ser calculada pela fórmula Ec = mv²/2.”
+
+### Elementos visuais
+
+- Carrinho 1: massa `m₁` e velocidade `v₁`;
+- Carrinho 2: massa `m₂` e velocidade `v₂`;
+- Setas indicando as velocidades;
+- Fórmula `Ec = ½mv²`;
+- Albert Einstein explicando no quadro.
+
+### Transição
+
+Os carrinhos continuam se aproximando enquanto a câmera passa a destacar um dos corpos.
+
+---
+
+## CENA 3 — MOMENTO LINEAR
+
+**Tempo estimado:** 30–35 segundos
+
+### Visual
+
+Einstein aponta para um dos dois corpos e apresenta o conceito de **momento linear**.
+
+A fórmula aparece ao lado do corpo destacado:
+
+> **p = mv**
+
+Em seguida, a câmera amplia a visão e mostra os dois corpos em uma visão horizontal centralizada.
+
+A fórmula do momento linear total aparece entre os corpos:
+
+> **p_total = m₁v₁ + m₂v₂**
+
+### Narração
+
+> “Antes de analisarmos a colisão, precisamos compreender o que é o momento linear. É uma grandeza que indica a quantidade de movimento que um corpo possui. Podemos calculá-la com o produto da massa pela velocidade.”
+
+Após os dois corpos aparecerem:
+
+> “Quando temos mais de um corpo no sistema, podemos somar o momento linear de cada objeto, chamando isso de momento linear total.”
+
+### Elementos visuais
+
+- Fórmula `p = mv`;
+- Fórmula `p_total = m₁v₁ + m₂v₂`;
+- Massas e velocidades dos dois corpos;
+- Einstein apontando para os objetos;
+- Setas indicando a direção do movimento.
+
+### Transição
+
+Os dois carrinhos continuam se aproximando até ficarem próximos do momento da colisão.
+
+---
+
+## CENA 4 — A COLISÃO
+
+**Tempo estimado:** 25–30 segundos
+
+### Visual
+
+Os dois carrinhos aparecem se aproximando até ocorrer a colisão.
+
+No momento do impacto, a animação é pausada. Einstein aparece diante do quadro negro e escreve a equação da conservação do momento linear:
+
+> **m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'**
+
+As velocidades antes e depois da colisão são representadas pelas setas.
+
+### Narração
+
+> “Agora observem o que acontece quando ambos os objetos se chocam. Suas velocidades sofrem mudanças, porém o momento linear total do sistema continua constante. Isso é possível de se afirmar com esta fórmula.”
+
+### Elementos visuais
+
+- Aproximação dos carrinhos;
+- Efeito visual no momento do impacto;
+- Pausa da animação;
+- Albert Einstein;
+- Equação da conservação do momento linear;
+- Setas representando as velocidades antes e depois.
+
+### Transição
+
+A animação continua e os carrinhos começam a se afastar após o impacto.
+
+---
+
+## CENA 5 — APÓS A COLISÃO
+
+**Tempo estimado:** 30–35 segundos
+
+### Visual
+
+Os corpos se afastam em sentidos diferentes, apresentando novas velocidades.
+
+As novas velocidades são indicadas por setas e identificadas como:
+
+> `v₁'` e `v₂'`
+
+Einstein aponta para os dois carrinhos enquanto compara suas velocidades antes e depois da colisão.
+
+Também é apresentada a conservação do momento linear:
+
+> **p_inicial = p_final**
+
+ou:
+
+> **m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'**
+
+### Narração
+
+> “Como podemos ver, agora cada corpo possui uma nova velocidade. Com a conservação do momento linear, é possível relacionar o antes e o depois de seus movimentos.”
+
+### Elementos visuais
+
+- Carrinhos se afastando;
+- Novas velocidades;
+- Setas indicando direção e sentido;
+- `v₁'` e `v₂'`;
+- Einstein apontando para os corpos;
+- Comparação entre o momento inicial e final.
+
+### Transição
+
+A câmera volta para Einstein, que passa a explicar o comportamento da energia cinética após a colisão.
+
+---
+
+## CENA 6 — CONSERVAÇÃO DA ENERGIA CINÉTICA
+
+**Tempo estimado:** 40–45 segundos
+
+### Visual
+
+Einstein apresenta novamente a energia cinética, agora comparando os valores **antes e depois da colisão**.
+
+No quadro aparecem:
+
+**Antes da colisão:**
+
+> `Ec₁ + Ec₂`
+
+**Depois da colisão:**
+
+> `Ec₁' + Ec₂'`
+
+Em seguida, aparece a relação:
+
+> **Ec_total inicial = Ec_total final**
+
+### Narração
+
+> “Mas uma colisão elástica possui uma característica especial. Além do momento linear, a energia cinética total também é conservada.”
+
+> “Isso significa que, no modelo ideal, a quantidade total de energia cinética antes da colisão é igual à quantidade total depois dela.”
+
+### Elementos visuais
+
+- Comparação entre energia cinética antes e depois;
+- Barras representando a energia cinética;
+- Barras com o mesmo tamanho antes e depois;
+- Fórmula da energia cinética;
+- Einstein explicando no quadro.
+
+### Transição
+
+As barras de energia antes e depois ficam com o mesmo tamanho. Em seguida, a tela apresenta a comparação entre colisões elásticas e inelásticas.
+
+---
+
+## CENA 7 — COLISÃO ELÁSTICA × INELÁSTICA
+
+**Tempo estimado:** 35–40 segundos
+
+### Visual
+
+A tela é dividida em duas partes.
+
+### COLISÃO ELÁSTICA
+
+- Os corpos se separam após a colisão;
+- Momento linear total conservado;
+- Energia cinética total conservada.
+
+### COLISÃO INELÁSTICA
+
+- Os corpos podem permanecer juntos após a colisão;
+- Momento linear total conservado em um sistema isolado;
+- Energia cinética total não é conservada.
+
+### Narração
+
+> “É importante não confundir uma colisão elástica com uma colisão inelástica. Na colisão elástica ideal, tanto o momento linear total quanto a energia cinética total são conservados. Já na colisão inelástica, o momento linear total também é conservado em um sistema isolado, mas parte da energia cinética é transformada em outras formas de energia, como calor, som ou deformações.”
+
+### Transição
+
+A parte referente à colisão elástica fica destacada e a animação retorna aos carrinhos utilizados no experimento.
+
+---
+
+## CENA 8 — EXEMPLO DO COTIDIANO
+
+**Tempo estimado:** 25–30 segundos
+
+### Visual
+
+É apresentada uma mesa de bilhar. Uma bola em movimento atinge outra inicialmente parada.
+
+### Narração
+
+> “Um exemplo aproximado pode ser observado em bolas de bilhar. Quando uma bola em movimento atinge outra, ocorre uma transferência de momento e energia, fazendo com que os movimentos das bolas mudem.”
+
+### Elementos visuais
+
+- Mesa de bilhar;
+- Bola 1 em movimento;
+- Bola 2 inicialmente parada;
+- Colisão;
+- Bolas seguindo em direções diferentes.
+
+### Texto na tela
+
+> **Modelo ideal: colisão elástica**
+
+> Colisões macroscópicas reais geralmente não são perfeitamente elásticas, pois podem ocorrer perdas de energia para som, calor e deformações.
+
+### Transição
+
+A cena retorna para Einstein.
+
+---
+
+## CENA 9 — RELAÇÃO COM ALBERT EINSTEIN
+
+**Tempo estimado:** 25–30 segundos
+
+### Visual
+
+Albert Einstein aparece novamente. Ao fundo, surgem fórmulas e elementos relacionados à Física, acompanhados de uma breve representação da evolução da Física.
+
+### Narração
+
+> “Albert Einstein não foi o responsável pela criação da teoria das colisões. Porém, seus trabalhos fazem parte do desenvolvimento da Física Moderna e contribuíram para ampliar nossa compreensão sobre conceitos fundamentais da natureza.”
+
+### Elementos visuais
+
+- Albert Einstein;
+- Fórmulas de Física;
+- Elementos relacionados à Física Moderna;
+- Breve linha do tempo.
+
+### Transição
+
+A imagem de Einstein desaparece e retorna para os dois carrinhos.
+
+---
+
+## CENA 10 — CONCLUSÃO
+
+**Tempo estimado:** 30 segundos
+
+### Visual
+
+Os dois carrinhos aparecem novamente. Em seguida, os principais conceitos estudados surgem na tela, um por vez:
+
+> **COLISÃO**  
+> ↓  
+> **MOMENTO LINEAR**  
+> ↓  
+> **ENERGIA CINÉTICA**  
+> ↓  
+> **CONSERVAÇÃO**
+
+### Narração
+
+> “Uma colisão pode parecer apenas um simples choque entre dois objetos, mas a Física mostra que existe muito mais por trás desse fenômeno. Na colisão elástica em uma dimensão, podemos utilizar a conservação do momento linear e da energia cinética para compreender e prever o movimento dos corpos antes e depois do choque.”
+
+### Tela final
+
+> **COLISÃO ELÁSTICA EM 1D**
+>
+> **Grupo Albert Einstein**
+>
+> ****
+>
+> **2026**
+
+
+
 
 ## 7. Fontes de Pesquisa
 1 - https://brasilescola.uol.com.br/amp/fisica/colisoes.htm  acessado 24/08/26.
