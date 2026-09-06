@@ -1,0 +1,83 @@
+###Código da cena 1 [temporário]
+
+from manim import *
+
+# Configuração de exibição
+config.media_width = "80%"
+config.verbosity = "WARNING"
+
+class Cena1QuadroNegro(Scene):
+    def construct(self):
+        # 1. Estilo Quadro Negro (Fundo escuro com borda verde/madeira estilo giz)
+        fundo = Rectangle(width=13, height=7, fill_color="#1E2A20", fill_opacity=1, stroke_color="#2E3D30", stroke_width=6)
+        borda_giz = Rectangle(width=12.6, height=6.6, stroke_color=WHITE, stroke_width=2, stroke_opacity=0.6)
+        
+        titulo = Text("Simulação: Colisão Frontal", font_size=32, color=WHITE).to_edge(UP, buff=0.8)
+        chao = Line(LEFT * 5.5, RIGHT * 5.5, color=WHITE, stroke_width=3).shift(DOWN * 1.5)
+        
+        self.add(fundo, borda_giz)
+        self.play(Write(titulo), Create(chao))
+        self.wait(0.5)
+
+        # 2. Função para desenhar um carrinho estilo giz
+        def criar_carrinho(cor):
+            corpo = Rectangle(width=1.4, height=0.6, fill_color=cor, fill_opacity=0.3, stroke_color=cor, stroke_width=3)
+            teto = Polygon([-0.4, 0.3, 0], [-0.2, 0.6, 0], [0.2, 0.6, 0], [0.4, 0.3, 0], 
+                           stroke_color=cor, fill_color=cor, fill_opacity=0.2, stroke_width=3)
+            roda_esq = Circle(radius=0.18, color=WHITE, fill_color="#1E2A20", fill_opacity=1, stroke_width=2).move_to(corpo.get_bottom() + LEFT * 0.4)
+            roda_dir = Circle(radius=0.18, color=WHITE, fill_color="#1E2A20", fill_opacity=1, stroke_width=2).move_to(corpo.get_bottom() + RIGHT * 0.4)
+            
+            carrinho = VGroup(corpo, teto, roda_esq, roda_dir)
+            return carrinho
+
+        # Criar os dois carrinhos
+        carro1 = criar_carrinho(BLUE_B).move_to(LEFT * 4 + DOWN * 1.05)
+        carro2 = criar_carrinho(RED_B).move_to(RIGHT * 4 + DOWN * 1.05)
+        
+        # Inverter orientação visual do carro 2 para ficar de frente
+        carro2.flip(RIGHT)
+
+        self.play(FadeIn(carro1), FadeIn(carro2))
+        self.wait(0.5)
+
+        # 3. Animação da colisão de frente
+        ponto_impacto = ORIGIN + DOWN * 1.05
+        
+        self.play(
+            carro1.animate.move_to(ponto_impacto + LEFT * 0.7),
+            carro2.animate.move_to(ponto_impacto + RIGHT * 0.7),
+            run_time=1.8,
+            rate_func=linear
+        )
+
+        # Efeito de impacto (faísca de giz)
+        faisca = Flash(ponto_impacto, color=YELLOW_B, flash_radius=0.6, line_length=0.3)
+        self.play(faisca, run_time=0.3)
+
+        # Recuo pós-colisão (simulando colisão elástica/mista)
+        self.play(
+            carro1.animate.shift(LEFT * 1.2),
+            carro2.animate.shift(RIGHT * 1.2),
+            run_time=1.0,
+            rate_func=rush_from
+        )
+
+        self.wait(1.5)
+
+
+
+
+
+
+###Código para a cena 2
+
+
+
+
+
+
+
+
+
+
+
