@@ -24,6 +24,8 @@ Elementos visuais:
 
 Transição:
 Os carrinhos começam a se movimentar em direção um ao outro.
+Feito no código: quadro negro com os carrinhos colidindo.
+O que falta: Albert Einstein e título.
 
 ---
 
@@ -51,6 +53,9 @@ Elementos visuais:
 
 Transição:
 Os carrinhos continuam se aproximando enquanto a câmera destaca um dos corpos.
+Feito no código: Quadro negro com carrinhos, massas e setas.
+O que falta: Einstein e fórmula.
+
 
 ---
 
