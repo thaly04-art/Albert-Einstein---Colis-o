@@ -75,9 +75,199 @@ class Cena1QuadroNegro(Scene):
 
 
 
+###Código para a cena 4
 
 
+from manim import *
+
+class ColisaoEinstein(Scene):
+    def construct(self):
+        # 1. Configuração do Cenário
+        chao = Line(LEFT * 7, RIGHT * 7, color=WHITE).shift(DOWN * 2)
+        self.add(chao)
+
+        # Função para criar os carrinhos
+        def criar_carrinho(cor, texto, posicao_inicial):
+            corpo = Rectangle(width=2, height=1, color=cor, fill_opacity=0.8)
+            roda1 = Circle(radius=0.25, color=GRAY, fill_opacity=1).shift(DOWN * 0.5 + LEFT * 0.6)
+            roda2 = Circle(radius=0.25, color=GRAY, fill_opacity=1).shift(DOWN * 0.5 + RIGHT * 0.6)
+            label = MathTex(texto, color=WHITE).move_to(corpo.get_center())
+            carrinho = VGroup(corpo, roda1, roda2, label)
+            carrinho.move_to(posicao_inicial)
+            return carrinho
+
+        # Criando os carrinhos (largura 2, centros em x = -5 e x = +5)
+        carrinho1 = criar_carrinho(BLUE, "m_1", LEFT * 5 + DOWN * 1.25)
+        carrinho2 = criar_carrinho(RED, "m_2", RIGHT * 5 + DOWN * 1.25)
+
+        # Setas de velocidade antes da colisão (v1 e v2)
+        seta_v1 = Arrow(start=LEFT * 0.8, end=RIGHT * 0.8, color=YELLOW)
+        seta_v2 = Arrow(start=RIGHT * 0.8, end=LEFT * 0.8, color=YELLOW)
+        label_v1 = MathTex("v_1").next_to(seta_v1, UP, buff=0.1)
+        label_v2 = MathTex("v_2").next_to(seta_v2, UP, buff=0.1)
+
+        grupo_v1 = VGroup(seta_v1, label_v1).next_to(carrinho1, UP, buff=0.15)
+        grupo_v2 = VGroup(seta_v2, label_v2).next_to(carrinho2, UP, buff=0.15)
+
+        # Entrada inicial dos carrinhos e setas
+        self.play(
+            FadeIn(carrinho1),
+            FadeIn(carrinho2),
+            FadeIn(grupo_v1),
+            FadeIn(grupo_v2)
+        )
+
+        # Ativa os updaters para as setas acompanharem o movimento
+        grupo_v1.add_updater(lambda m: m.next_to(carrinho1, UP, buff=0.15))
+        grupo_v2.add_updater(lambda m: m.next_to(carrinho2, UP, buff=0.15))
+
+        # 2. Aproximação dos carrinhos (toque exato no centro x = 0)
+        self.play(
+            carrinho1.animate.shift(RIGHT * 4.0),
+            carrinho2.animate.shift(LEFT * 4.0),
+            run_time=2,
+            rate_func=linear
+        )
+
+        # 3. Efeito visual no impacto
+        ponto_impacto = carrinho1.get_right()
+        impacto = Flash(ponto_impacto, color=YELLOW, line_length=0.5, num_lines=12)
+        self.play(impacto)
+        self.wait(0.5)
+
+        # 4. Aparição do Einstein e Quadro Negro
+        einstein = Tex("Albert Einstein", color=WHITE).scale(0.8).to_corner(UL)
+        quadro = Rectangle(width=7.5, height=2.8, color=DARK_BROWN, fill_color=BLACK, fill_opacity=0.9)
+        quadro.to_edge(UP, buff=0.5)
+
+        self.play(FadeIn(quadro), Write(einstein))
+
+        # 5. Equação da conservação do momento linear com cores mapeadas
+        equacao = MathTex(
+            "m_1", "v_1", "+", "m_2", "v_2", "=", "m_1", "v_1'", "+", "m_2", "v_2'",
+            substrings_to_isolate=["m_1", "m_2"]
+        ).move_to(quadro.get_center())
+
+        equacao.set_color_by_tex("m_1", BLUE)
+        equacao.set_color_by_tex("m_2", RED)
+
+        self.play(Write(equacao), run_time=2.5)
+        self.wait(2)
+
+        # Ocultando quadro e removendo vetores antigos
+        grupo_v1.clear_updaters()
+        grupo_v2.clear_updaters()
+
+        self.play(
+            FadeOut(quadro),
+            FadeOut(einstein),
+            FadeOut(equacao),
+            FadeOut(grupo_v1),
+            FadeOut(grupo_v2)
+        )
+
+        # Novas setas de velocidade pós-colisão (v1' e v2')
+        seta_v1_linha = Arrow(start=RIGHT * 0.8, end=LEFT * 0.8, color=GREEN)
+        seta_v2_linha = Arrow(start=LEFT * 0.8, end=RIGHT * 0.8, color=GREEN)
+        label_v1_linha = MathTex("v_1'").next_to(seta_v1_linha, UP, buff=0.1)
+        label_v2_linha = MathTex("v_2'").next_to(seta_v2_linha, UP, buff=0.1)
+
+        grupo_v1_linha = VGroup(seta_v1_linha, label_v1_linha).next_to(carrinho1, UP, buff=0.15)
+        grupo_v2_linha = VGroup(seta_v2_linha, label_v2_linha).next_to(carrinho2, UP, buff=0.15)
+
+        grupo_v1_linha.add_updater(lambda m: m.next_to(carrinho1, UP, buff=0.15))
+        grupo_v2_linha.add_updater(lambda m: m.next_to(carrinho2, UP, buff=0.15))
+
+        self.play(FadeIn(grupo_v1_linha), FadeIn(grupo_v2_linha))
+
+        # 6. Afastamento dos carrinhos pós-colisão
+        self.play(
+            carrinho1.animate.shift(LEFT * 3.5),
+            carrinho2.animate.shift(RIGHT * 3.5),
+            run_time=2,
+            rate_func=linear
+        )
+
+        self.wait(1)
+
+https://einstein-cart-lab.lovable.app/
 
 
+###Código para a cena 5
 
+from manim import *
+
+class ConservacaoMomento(Scene):
+    def construct(self):
+        # --- 1. Elementos Visuais: Os Carrinhos ---
+        carrinho1 = Rectangle(width=1.5, height=1.0, color=BLUE, fill_opacity=0.8)
+        carrinho2 = Rectangle(width=1.5, height=1.0, color=RED, fill_opacity=0.8)
+        
+        # Posição logo após o toque no centro
+        carrinho1.move_to(LEFT * 0.8)
+        carrinho2.move_to(RIGHT * 0.8)
+        
+        m1 = MathTex("m_1", color=WHITE).move_to(carrinho1.get_center())
+        m2 = MathTex("m_2", color=WHITE).move_to(carrinho2.get_center())
+        
+        grupo_c1 = VGroup(carrinho1, m1)
+        grupo_c2 = VGroup(carrinho2, m2)
+        
+        self.play(FadeIn(grupo_c1), FadeIn(grupo_c2))
+
+        # --- 2. Elementos Visuais: Novas Velocidades e Setas ---
+        seta1 = Arrow(start=RIGHT * 0.7, end=LEFT * 0.7, color=BLUE).next_to(grupo_c1, UP, buff=0.15)
+        seta2 = Arrow(start=LEFT * 0.7, end=RIGHT * 0.7, color=RED).next_to(grupo_c2, UP, buff=0.15)
+        
+        v1_text = MathTex("V_1'", color=BLUE).next_to(seta1, UP, buff=0.1)
+        v2_text = MathTex("V_2'", color=RED).next_to(seta2, UP, buff=0.1)
+        
+        grupo_v1 = VGroup(seta1, v1_text)
+        grupo_v2 = VGroup(seta2, v2_text)
+
+        # Entrada suave dos vetores antes de iniciar o movimento
+        self.play(GrowArrow(seta1), GrowArrow(seta2), FadeIn(v1_text), FadeIn(v2_text))
+
+        # Ativação dos updaters para acompanhar os carrinhos
+        grupo_v1.add_updater(lambda m: m.next_to(grupo_c1, UP, buff=0.15))
+        grupo_v2.add_updater(lambda m: m.next_to(grupo_c2, UP, buff=0.15))
+
+        # Os corpos se afastam
+        self.play(
+            grupo_c1.animate.shift(LEFT * 3),
+            grupo_c2.animate.shift(RIGHT * 3),
+            run_time=2,
+            rate_func=linear
+        )
+
+        # Congela a posição das setas para evitar interferência na próxima etapa
+        grupo_v1.clear_updaters()
+        grupo_v2.clear_updaters()
+
+        # --- 3. Aparição do Einstein ---
+        einstein = Text("Einstein", font_size=36, color=YELLOW, weight=BOLD).to_edge(UP, buff=0.5)
+        self.play(FadeIn(einstein))
+
+        # Setas apontando do Einstein para os carrinhos já posicionados
+        braco_apontando1 = Arrow(start=einstein.get_bottom(), end=grupo_c1.get_top() + UP * 0.3, color=YELLOW, buff=0.1)
+        braco_apontando2 = Arrow(start=einstein.get_bottom(), end=grupo_c2.get_top() + UP * 0.3, color=YELLOW, buff=0.1)
+        
+        self.play(GrowArrow(braco_apontando1), GrowArrow(braco_apontando2))
+
+        # --- 4. Comparação entre Momento Inicial e Final ---
+        # Strings 'r' (raw string) evitam problemas de escape com LaTeX (\text)
+        eq1 = MathTex(r"p_{\text{inicial}} = p_{\text{final}}", font_size=44)
+        eq2 = MathTex(r"m_1 v_1 + m_2 v_2 = m_1 V_1' + m_2 V_2'", font_size=44)
+        
+        grupo_eq = VGroup(eq1, eq2).arrange(DOWN, buff=0.4).to_edge(DOWN, buff=0.7)
+        caixa_eq = SurroundingRectangle(grupo_eq, color=WHITE, buff=0.25)
+
+        self.play(Write(eq1))
+        self.wait(0.5)
+        self.play(Write(eq2))
+        self.play(Create(caixa_eq))
+        
+        self.wait(3)
+
+https://einstein-cart-lab.lovable.app
 
