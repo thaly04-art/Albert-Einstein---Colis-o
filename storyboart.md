@@ -114,6 +114,8 @@ Elementos visuais:
 Transição:
 A animação continua e os carrinhos começam a se afastar após o impacto.
 
+https://einstein-cart-lab.lovable.app/
+
 ---
 
 CENA 5 — APÓS A COLISÃO
