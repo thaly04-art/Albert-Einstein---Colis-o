@@ -190,8 +190,6 @@ class ColisaoEinstein(Scene):
 
         self.wait(1)
 
-https://einstein-cart-lab.lovable.app/
-
 
 ###Código para a cena 5
 
@@ -269,5 +267,4 @@ class ConservacaoMomento(Scene):
         
         self.wait(3)
 
-https://einstein-cart-lab.lovable.app
 
