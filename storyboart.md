@@ -147,6 +147,8 @@ Elementos visuais:
 Transição:
 A câmera volta para Einstein, que passa a explicar o comportamento da energia cinética após a colisão.
 
+https://einstein-cart-lab.lovable.app/
+
 STORYBOARD - CENAS 6 a 10
 
 CENA 6 — CONSERVAÇÃO DA ENERGIA CINÉTICA
