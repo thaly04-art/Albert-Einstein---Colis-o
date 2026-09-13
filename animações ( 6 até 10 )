@@ -1,1 +1,607 @@
+###Código cena 7
+
+from manim import *
+
+class Cena7ColisaoElasticaVsInelastica(Scene):
+def construct(self):
+
+    # ---------------------------------------------------------
+
+    # 1. CENÁRIO: QUADRO NEGRO E MESA
+
+    # ---------------------------------------------------------
+
+    quadro_moldura = Rectangle(
+
+        width=13.0,
+
+        height=6.8,
+
+        color=DARK_BROWN,
+
+        stroke_width=12
+
+    )
+
+    quadro_fundo = Rectangle(
+
+        width=12.7,
+
+        height=6.5,
+
+        fill_color="#1E3323",
+
+        fill_opacity=1.0,
+
+        stroke_width=0
+
+    )
+
+    quadro = VGroup(
+
+        quadro_fundo,
+
+        quadro_moldura
+
+    ).to_edge(UP, buff=0.1)
+
+    mesa = Rectangle(
+
+        width=14.0,
+
+        height=1.2,
+
+        fill_color="#4A2E18",
+
+        fill_opacity=1.0,
+
+        stroke_color="#2D1A0E"
+
+    )
+
+    mesa.to_edge(DOWN, buff=0)
+
+    self.add(quadro, mesa)
+
+    # ---------------------------------------------------------
+
+    # 2. PERSONAGEM: ALBERT EINSTEIN (Ilustração Vetorial)
+
+    # ---------------------------------------------------------
+
+    cabecrea = Circle(
+
+        radius=0.35,
+
+        fill_color="#FFE0BD",
+
+        fill_opacity=1,
+
+        stroke_color="#D8B48F"
+
+    )
+
+    cabelo = Star(
+
+        n=12,
+
+        outer_radius=0.55,
+
+        inner_radius=0.38,
+
+        fill_color="#EEEEEE",
+
+        fill_opacity=1,
+
+        stroke_width=0
+
+    )
+
+    cabelo.move_to(cabecrea.get_center())
+
+    bigode = CurvedArrow(
+
+        LEFT * 0.15,
+
+        RIGHT * 0.15,
+
+        radius=0.2,
+
+        color="#CCCCCC",
+
+        stroke_width=4
+
+    ).move_to(cabecrea.get_center() + DOWN * 0.1)
+
+    olho_esq = Dot(
+
+        cabecrea.get_center() + LEFT * 0.1 + UP * 0.05,
+
+        radius=0.04,
+
+        color=BLACK
+
+    )
+
+    olho_dir = Dot(
+
+        cabecrea.get_center() + RIGHT * 0.1 + UP * 0.05,
+
+        radius=0.04,
+
+        color=BLACK
+
+    )
+
+    corpo = Polygon(
+
+        [-0.3, -0.4, 0],
+
+        [0.3, -0.4, 0],
+
+        [0.45, -1.2, 0],
+
+        [-0.45, -1.2, 0],
+
+        fill_color="#555555",
+
+        fill_opacity=1,
+
+        stroke_color="#333333"
+
+    )
+
+    gravata = Polygon(
+
+        [0, -0.4, 0],
+
+        [-0.06, -0.7, 0],
+
+        [0, -0.9, 0],
+
+        [0.06, -0.7, 0],
+
+        fill_color=RED,
+
+        fill_opacity=1
+
+    )
+
+    braco_direito = Line(
+
+        [-0.3, -0.5, 0],
+
+        [-0.7, -0.2, 0],
+
+        stroke_width=6,
+
+        color="#555555"
+
+    )
+
+    mao_direita = Dot(
+
+        [-0.7, -0.2, 0],
+
+        radius=0.08,
+
+        color="#FFE0BD"
+
+    )
+
+    einstein = VGroup(
+
+        cabelo,
+
+        cabecrea,
+
+        olho_esq,
+
+        olho_dir,
+
+        bigode,
+
+        corpo,
+
+        gravata,
+
+        braco_direito,
+
+        mao_direita
+
+    )
+
+    einstein.scale(0.85).to_corner(
+
+        DOWN + LEFT,
+
+        buff=0.4
+
+    ).shift(UP * 0.8)
+
+    self.play(
+
+        FadeIn(einstein, shift=RIGHT)
+
+    )
+
+    # ---------------------------------------------------------
+
+    # 3. TEXTOS DO QUADRO NEGRO (DIVISÃO DE TELA)
+
+    # ---------------------------------------------------------
+
+    linha_divisoria = DashedLine(
+
+        UP * 2.5,
+
+        DOWN * 1.5,
+
+        color=GRAY,
+
+        stroke_width=2
+
+    ).shift(RIGHT * 1.2)
+
+    # --- Coluna Esquerda: Colisão Elástica ---
+
+    col_elastica_titulo = Text(
+
+        "COLISÃO ELÁSTICA",
+
+        font_size=24,
+
+        color=GREEN,
+
+        font="Sans"
+
+    ).shift(LEFT * 2.2 + UP * 2.0)
+
+    col_elastica_itens = VGroup(
+
+        MathTex(
+
+            r"\bullet\ \text{Corpos se separam}",
+
+            font_size=24
+
+        ),
+
+        MathTex(
+
+            r"\bullet\ p_{\text{total}} \text{ conservado}",
+
+            font_size=24
+
+        ),
+
+        MathTex(
+
+            r"\bullet\ E_{c\text{ total}} \text{ conservada}",
+
+            font_size=24,
+
+            color=GREEN
+
+        )
+
+    ).arrange(
+
+        DOWN,
+
+        aligned_edge=LEFT,
+
+        buff=0.35
+
+    ).next_to(
+
+        col_elastica_titulo,
+
+        DOWN,
+
+        buff=0.4
+
+    )
+
+    # --- Coluna Direita: Colisão Inelástica ---
+
+    col_inelastica_titulo = Text(
+
+        "COLISÃO INELÁSTICA",
+
+        font_size=24,
+
+        color=RED,
+
+        font="Sans"
+
+    ).shift(RIGHT * 4.2 + UP * 2.0)
+
+    col_inelastica_itens = VGroup(
+
+        MathTex(
+
+            r"\bullet\ \text{Corpos permanecem juntos}",
+
+            font_size=23
+
+        ),
+
+        MathTex(
+
+            r"\bullet\ p_{\text{total}} \text{ conservado}",
+
+            font_size=23
+
+        ),
+
+        MathTex(
+
+            r"\bullet\ E_{c\text{ total}} \text{ NÃO conservada}",
+
+            font_size=23,
+
+            color=RED
+
+        ),
+
+        Text(
+
+            "(Perda p/ calor, som e deformações)",
+
+            font_size=14,
+
+            color=LIGHT_GRAY
+
+        ).shift(RIGHT * 0.2)
+
+    ).arrange(
+
+        DOWN,
+
+        aligned_edge=LEFT,
+
+        buff=0.35
+
+    ).next_to(
+
+        col_inelastica_titulo,
+
+        DOWN,
+
+        buff=0.4
+
+    )
+
+    self.play(
+
+        Create(linha_divisoria),
+
+        Write(col_elastica_titulo),
+
+        Write(col_inelastica_titulo)
+
+    )
+
+    self.play(
+
+        FadeIn(col_elastica_itens, shift=UP * 0.2),
+
+        FadeIn(col_inelastica_itens, shift=UP * 0.2),
+
+        run_time=2.5
+
+    )
+
+    self.wait(2)
+
+    # ---------------------------------------------------------
+
+    # 4. TRANSIÇÃO: DESTAQUE NA COLISÃO ELÁSTICA E CARRINHOS
+
+    # ---------------------------------------------------------
+
+    destaque = SurroundingRectangle(
+
+        VGroup(
+
+            col_elastica_titulo,
+
+            col_elastica_itens
+
+        ),
+
+        color=GREEN,
+
+        buff=0.2,
+
+        stroke_width=3
+
+    )
+
+    self.play(
+
+        Create(destaque),
+
+        col_inelastica_titulo.animate.set_opacity(0.25),
+
+        col_inelastica_itens.animate.set_opacity(0.25),
+
+        linha_divisoria.animate.set_opacity(0.25)
+
+    )
+
+    self.wait(1.5)
+
+    # ---------------------------------------------------------
+
+    # 5. ANIMAÇÃO DOS CARRINHOS
+
+    # ---------------------------------------------------------
+
+    carrinho1_corpo = RoundedRectangle(
+
+        corner_radius=0.1,
+
+        width=1.0,
+
+        height=0.4,
+
+        fill_color=BLUE,
+
+        fill_opacity=1,
+
+        stroke_color=WHITE
+
+    )
+
+    carrinho1_roda1 = Dot(
+
+        radius=0.1,
+
+        color=BLACK
+
+    ).move_to(
+
+        carrinho1_corpo.get_corner(DOWN + LEFT) + RIGHT * 0.2
+
+    )
+
+    carrinho1_roda2 = Dot(
+
+        radius=0.1,
+
+        color=BLACK
+
+    ).move_to(
+
+        carrinho1_corpo.get_corner(DOWN + RIGHT) + LEFT * 0.2
+
+    )
+
+    carrinho1 = VGroup(
+
+        carrinho1_corpo,
+
+        carrinho1_roda1,
+
+        carrinho1_roda2
+
+    ).move_to(
+
+        LEFT * 3.5 + DOWN * 2.4
+
+    )
+
+    carrinho2_corpo = RoundedRectangle(
+
+        corner_radius=0.1,
+
+        width=1.0,
+
+        height=0.4,
+
+        fill_color=ORANGE,
+
+        fill_opacity=1,
+
+        stroke_color=WHITE
+
+    )
+
+    carrinho2_roda1 = Dot(
+
+        radius=0.1,
+
+        color=BLACK
+
+    ).move_to(
+
+        carrinho2_corpo.get_corner(DOWN + LEFT) + RIGHT * 0.2
+
+    )
+
+    carrinho2_roda2 = Dot(
+
+        radius=0.1,
+
+        color=BLACK
+
+    ).move_to(
+
+        carrinho2_corpo.get_corner(DOWN + RIGHT) + LEFT * 0.2
+
+    )
+
+    carrinho2 = VGroup(
+
+        carrinho2_corpo,
+
+        carrinho2_roda1,
+
+        carrinho2_roda2
+
+    ).move_to(
+
+        RIGHT * 3.5 + DOWN * 2.4
+
+    )
+
+    seta_c1 = Arrow(
+
+        start=carrinho1.get_center(),
+
+        end=carrinho1.get_center() + RIGHT * 1.2,
+
+        color=YELLOW,
+
+        buff=0
+
+    ).next_to(
+
+        carrinho1,
+
+        UP,
+
+        buff=0.1
+
+    )
+
+    seta_c2 = Arrow(
+
+        start=carrinho2.get_center(),
+
+        end=carrinho2.get_center() + LEFT * 1.2,
+
+        color=YELLOW,
+
+        buff=0
+
+    ).next_to(
+
+        carrinho2,
+
+        UP,
+
+        buff=0.1
+
+    )
+
+    self.play(
+
+        FadeIn(carrinho1, shift=UP * 0.5),
+
+        FadeIn(carrinho2, shift=UP * 0.5)
+
+    )
+
+    self.play(
+
+        GrowArrow(seta_c1),
+
+        GrowArrow(seta_c2)
+
+    )
+
+    self.wait(2)
 
