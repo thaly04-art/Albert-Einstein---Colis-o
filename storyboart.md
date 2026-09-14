@@ -26,7 +26,7 @@ Transição:
 Os carrinhos começam a se movimentar em direção um ao outro.
 Feito no código: quadro negro com os carrinhos colidindo.
 O que falta: Albert Einstein e título.
-
+link da animação feita pelo Canva: https://canva.link/9prdv2soljdwdv7
 ---
 
 CENA 2 — ANTES DA COLISÃO
@@ -56,6 +56,7 @@ Os carrinhos continuam se aproximando enquanto a câmera destaca um dos corpos.
 Feito no código: Quadro negro com carrinhos, massas e setas.
 O que falta: Einstein e fórmula.
 
+link da animação feita pelo Canva: https://canva.link/pestzyr5p3ut8cm
 
 ---
 
