@@ -70,6 +70,163 @@ class Cena1QuadroNegro(Scene):
 
 
 ###Código para a cena 2
+from manim import *
+import numpy as np
+
+class ColisaoUnidimensional(Scene):
+    def criar_carrinho(self, massa, cor, sentido=RIGHT):
+        corpo = RoundedRectangle(
+            width=2.2, height=0.78, corner_radius=0.18,
+            stroke_color=cor, stroke_width=3,
+            fill_color=cor, fill_opacity=0.78,
+        )
+
+        cabine = RoundedRectangle(
+            width=0.72, height=0.33, corner_radius=0.08,
+            stroke_color=WHITE, stroke_width=1,
+            fill_color="#CFFBFF", fill_opacity=0.35,
+        ).move_to(corpo.get_center() + UP * 0.16 + sentido * 0.42)
+
+        farol = Dot(
+            ponto=corpo.get_center() + sentido * 1.04,
+            radius=0.06, color=YELLOW,
+        )
+
+        rodas = VGroup()
+        for x in (-0.67, 0.67):
+            aro = Circle(radius=0.18, color="#102B35", fill_opacity=1)
+            cubo = Circle(radius=0.065, color=cor, fill_opacity=1)
+            roda = VGroup(aro, cubo)
+            roda.move_to(corpo.get_bottom() + DOWN * 0.14 + RIGHT * x)
+            rodas.add(roda)
+
+        rotulo = MathTex(massa, color=WHITE).scale(0.7)
+        rotulo.move_to(corpo.get_center() + DOWN * 0.08)
+
+        return VGroup(corpo, cabine, farol, rodas, rotulo)
+
+    def criar_velocidade(self, texto, direcao):
+        seta = Arrow(
+            ORIGIN, direcao * 1.0, buff=0,
+            color=YELLOW, stroke_width=5,
+            max_tip_length_to_length_ratio=0.18,
+        )
+        rotulo = MathTex(texto, color=YELLOW).scale(0.72)
+        grupo = VGroup(rotulo, seta).arrange(RIGHT, buff=0.18)
+        if direcao[0] < 0:
+            grupo = VGroup(seta, rotulo).arrange(RIGHT, buff=0.18)
+        return grupo
+
+    def construct(self):
+        self.camera.background_color = "#071820"
+
+        titulo = Text(
+            "Colisão unidimensional",
+            font="DM Sans", font_size=28, color="#B9D5D8",
+        ).to_corner(UL)
+
+        pista = Line(
+            LEFT * 6.2 + DOWN * 1.55,
+            RIGHT * 6.2 + DOWN * 1.55,
+            color="#CFFBFF", stroke_width=4,
+        )
+
+        marcas = VGroup(*[
+            Line(
+                DOWN * 1.3 + RIGHT * x,
+                DOWN * 1.55 + RIGHT * x,
+                color="#72ABB0", stroke_width=1,
+            )
+            for x in np.arange(-5.5, 6, 1)
+        ])
+
+        carrinho_1 = self.criar_carrinho("m_1", "#29D7E6", RIGHT)
+        carrinho_1.move_to(LEFT * 4.6 + DOWN * 1.0)
+        v1 = self.criar_velocidade("v_1", RIGHT)
+        v1.next_to(carrinho_1, UP, buff=0.35)
+
+        carrinho_2 = self.criar_carrinho("m_2", "#FF775C", LEFT)
+        carrinho_2.move_to(RIGHT * 4.6 + DOWN * 1.0)
+        v2 = self.criar_velocidade("v_2", LEFT)
+        v2.next_to(carrinho_2, UP, buff=0.35)
+
+        self.play(Create(pista), Create(marcas), FadeIn(titulo))
+        self.play(FadeIn(carrinho_1), FadeIn(v1))
+
+        # m1 começa sozinho e o segundo carrinho entra depois.
+        self.play(
+            carrinho_1.animate.shift(RIGHT * 1.65),
+            v1.animate.shift(RIGHT * 1.65),
+            run_time=2.0,
+            rate_func=smooth,
+        )
+
+        self.play(FadeIn(carrinho_2, shift=LEFT * 0.28), FadeIn(v2))
+
+        # Ambos se movem até o contato exato das carrocerias.
+        self.play(
+            carrinho_1.animate.shift(RIGHT * 1.28),
+            v1.animate.shift(RIGHT * 1.28),
+            carrinho_2.animate.shift(LEFT * 1.28),
+            v2.animate.shift(LEFT * 1.28),
+            run_time=2.55,
+            rate_func=linear,
+        )
+
+        contato = carrinho_1.get_right() + RIGHT * 0.03
+        nucleo = Dot(contato, radius=0.13, color=YELLOW)
+        anel = Circle(radius=0.35, color=YELLOW, stroke_width=4).move_to(contato)
+
+        raios = VGroup(*[
+            Line(
+                contato + 0.34 * np.array([np.cos(a), np.sin(a), 0]),
+                contato + 0.82 * np.array([np.cos(a), np.sin(a), 0]),
+                color=ORANGE, stroke_width=3,
+            )
+            for a in np.linspace(0, TAU, 12, endpoint=False)
+        ])
+
+        particulas = VGroup(*[
+            Dot(
+                contato + 0.52 * np.array([np.cos(a), np.sin(a), 0]),
+                radius=0.035, color=YELLOW,
+            )
+            for a in np.linspace(0, TAU, 10, endpoint=False)
+        ])
+
+        texto = Text(
+            "COLISÃO!",
+            font="DM Sans", font_size=31,
+            weight=BOLD, color=YELLOW,
+        ).next_to(nucleo, UP, buff=0.32)
+
+        self.play(
+            FadeIn(nucleo, scale=0.4),
+            Create(anel),
+            Create(raios),
+            FadeIn(particulas),
+            FadeIn(texto, shift=UP * 0.1),
+            run_time=0.42,
+            rate_func=there_and_back_with_pause,
+        )
+
+        self.play(
+            anel.animate.scale(2.0).set_opacity(0),
+            raios.animate.scale(1.25).set_opacity(0),
+            particulas.animate.scale(1.38).set_opacity(0),
+            nucleo.animate.scale(1.3),
+            run_time=0.7,
+            rate_func=ease_out_cubic,
+        )
+
+        repouso = Text(
+            "Após o choque: repouso",
+            font="DM Sans", font_size=23, color="#FFD45D",
+        ).next_to(pista, DOWN, buff=0.72)
+
+        self.play(FadeIn(repouso, shift=UP * 0.12))
+        self.wait(2)
+
 
 
 
