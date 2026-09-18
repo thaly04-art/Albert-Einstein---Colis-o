@@ -183,6 +183,8 @@ Elementos visuais:
   Transição:
 As barras de energia permanecem com o mesmo tamanho e a tela muda para uma comparação entre colisão elástica e inelástica.
 
+https://animate-physics.lovable.app
+
 ---
 
 CENA 7 — COLISÃO ELÁSTICA × INELÁSTICA
