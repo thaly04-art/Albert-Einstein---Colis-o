@@ -746,4 +746,529 @@ def construct(self):
     )
 
     self.wait(2)
+###Cena 8
+from manim import *
 
+class Cena8ExemploCotidiano(Scene):
+def construct(self):
+
+    # ==========================================
+
+    # 1. MESA DE BILHAR
+
+    # ==========================================
+
+    mesa_borda = Rectangle(
+
+        width=10.4,
+
+        height=5.4,
+
+        color=WOOD_BROWN,
+
+        stroke_width=12,
+
+        fill_opacity=1
+
+    )
+
+    mesa_fundo = Rectangle(
+
+        width=10,
+
+        height=5,
+
+        color=DARK_GREEN,
+
+        fill_opacity=0.9,
+
+        stroke_width=0
+
+    )
+
+    grupo_mesa = VGroup(mesa_borda, mesa_fundo)
+
+    # ==========================================
+
+    # 2. BOLAS DE BILHAR
+
+    # ==========================================
+
+    # Bola 1 - branca
+
+    bola1 = Dot(
+
+        point=LEFT * 3.8,
+
+        radius=0.25,
+
+        color=WHITE
+
+    )
+
+    num1 = Text(
+
+        "1",
+
+        font_size=16,
+
+        color=BLACK
+
+    ).move_to(bola1.get_center())
+
+    grupo_bola1 = VGroup(bola1, num1)
+
+    # Bola 2 - vermelha
+
+    bola2 = Dot(
+
+        point=ORIGIN,
+
+        radius=0.25,
+
+        color=RED
+
+    )
+
+    num2 = Text(
+
+        "2",
+
+        font_size=16,
+
+        color=WHITE
+
+    ).move_to(bola2.get_center())
+
+    grupo_bola2 = VGroup(bola2, num2)
+
+    # ==========================================
+
+    # 3. TEXTO INFORMATIVO
+
+    # ==========================================
+
+    titulo_texto = Text(
+
+        "Modelo ideal: colisão elástica",
+
+        font_size=28,
+
+        weight=BOLD,
+
+        color=YELLOW
+
+    )
+
+    sub_texto = Paragraph(
+
+        "Colisões macroscópicas reais geralmente não são perfeitamente elásticas,",
+
+        "pois podem ocorrer perdas de energia para som, calor e deformações.",
+
+        font_size=18,
+
+        alignment="center",
+
+        line_spacing=0.8
+
+    )
+
+    sub_texto.next_to(
+
+        titulo_texto,
+
+        DOWN,
+
+        buff=0.2
+
+    )
+
+    caixa_texto = VGroup(
+
+        titulo_texto,
+
+        sub_texto
+
+    )
+
+    caixa_texto.to_edge(
+
+        UP,
+
+        buff=0.35
+
+    )
+
+    fundo_caixa = BackgroundRectangle(
+
+        caixa_texto,
+
+        color=BLACK,
+
+        fill_opacity=0.85,
+
+        buff=0.15
+
+    )
+
+    grupo_info_texto = VGroup(
+
+        fundo_caixa,
+
+        caixa_texto
+
+    )
+
+    # ==========================================
+
+    # 4. ENTRADA DA CENA
+
+    # ==========================================
+
+    self.play(
+
+        FadeIn(grupo_mesa),
+
+        run_time=1.5
+
+    )
+
+    self.play(
+
+        FadeIn(grupo_bola1),
+
+        FadeIn(grupo_bola2),
+
+        run_time=1
+
+    )
+
+    self.wait(0.8)
+
+    # ==========================================
+
+    # 5. APROXIMAÇÃO DA BOLA 1
+
+    # ==========================================
+
+    # A bola para a uma pequena distância da bola 2,
+
+    # evitando sobreposição antes da colisão.
+
+    ponto_colisao = LEFT * 0.5
+
+    self.play(
+
+        grupo_bola1.animate.move_to(ponto_colisao),
+
+        run_time=2.5,
+
+        rate_func=linear
+
+    )
+
+    # ==========================================
+
+    # 6. EFEITO DE IMPACTO
+
+    # ==========================================
+
+    impacto = VGroup(
+
+        Circle(
+
+            radius=0.32,
+
+            color=WHITE,
+
+            stroke_width=4
+
+        ),
+
+        Circle(
+
+            radius=0.18,
+
+            color=YELLOW,
+
+            stroke_width=3
+
+        )
+
+    )
+
+    impacto.move_to(
+
+        (grupo_bola1.get_center() + grupo_bola2.get_center()) / 2
+
+    )
+
+    # ==========================================
+
+    # 7. COLISÃO
+
+    # ==========================================
+
+    # Depois da colisão, as bolas seguem em
+
+    # direções diferentes.
+
+    dest_bola1 = RIGHT * 1.8 + UP * 1.4
+
+    dest_bola2 = RIGHT * 3.3 + DOWN * 0.9
+
+    self.play(
+
+        ShowPassingFlash(
+
+            impacto,
+
+            time_width=0.4,
+
+            run_time=0.5
+
+        ),
+
+        grupo_bola1.animate.move_to(dest_bola1),
+
+        grupo_bola2.animate.move_to(dest_bola2),
+
+        run_time=2,
+
+        rate_func=smooth
+
+    )
+
+    # ==========================================
+
+    # 8. TEXTO EXPLICATIVO
+
+    # ==========================================
+
+    self.play(
+
+        FadeIn(
+
+            grupo_info_texto,
+
+            shift=DOWN * 0.2
+
+        ),
+
+        run_time=1.2
+
+    )
+
+    # Tempo para a narração
+
+    self.wait(11)
+
+    # ==========================================
+
+    # 9. SAÍDA
+
+    # ==========================================
+
+    self.play(
+
+        FadeOut(grupo_info_texto),
+
+        FadeOut(grupo_bola1),
+
+        FadeOut(grupo_bola2),
+
+        FadeOut(grupo_mesa),
+
+        run_time=2
+
+    )
+
+    self.wait(0.5)
+###Cena 9
+from manim import *
+
+class Cena9RelacaoEinstein(Scene):
+    def construct(self):
+        # ==========================================
+        # 1. ELEMENTOS VISUAIS DA CENA 9
+        # ==========================================
+
+        # Fundo: Sala de Aula / Quadro Negro
+        quadro = Rectangle(width=12, height=6.5, color=DARK_GRAY, fill_opacity=0.9)
+        borda_quadro = Rectangle(width=12.4, height=6.9, color=WOOD_BROWN, stroke_width=10)
+        grupo_quadro = VGroup(quadro, borda_quadro)
+
+        # Representação Ilustrativa de Albert Einstein (Avatar/Boneco Simbólico)
+        cabeca_einstein = Dot(point=ORIGIN, radius=0.6, color=WHITE)
+        cabelo = AnnularSector(inner_radius=0.5, outer_radius=0.9, angle=PI, start_angle=0, color=LIGHT_GRAY)
+        cabelo.move_to(cabeca_einstein.get_center() + UP * 0.2)
+        bigode = CurvedArrow(start_point=LEFT * 0.25, end_point=RIGHT * 0.25, color=WHITE).move_to(cabeca_einstein.get_center() + DOWN * 0.2)
+        corpo = Polygon(
+            cabeca_einstein.get_center() + DOWN * 0.6 + LEFT * 0.8,
+            cabeca_einstein.get_center() + DOWN * 0.6 + RIGHT * 0.8,
+            cabeca_einstein.get_center() + DOWN * 2.2 + RIGHT * 1.2,
+            cabeca_einstein.get_center() + DOWN * 2.2 + LEFT * 1.2,
+            color=DARK_BLUE,
+            fill_opacity=1
+        )
+        avatar_einstein = VGroup(corpo, cabeca_einstein, cabelo, bigode)
+        avatar_einstein.move_to(LEFT * 3.5 + DOWN * 0.5)
+
+        # Fórmulas de Física no Quadro (Clássica vs. Moderna)
+        f_mecanica = MathTex(r"p = m \cdot v", font_size=32, color=GRAY_B)
+        f_relatividade = MathTex(r"E = m \cdot c^2", font_size=40, color=YELLOW)
+        f_momento_rel = MathTex(r"p = \gamma \cdot m \cdot v", font_size=32, color=GOLD_A)
+
+        f_mecanica.move_to(RIGHT * 2.5 + UP * 2)
+        f_relatividade.move_to(RIGHT * 2.5 + UP * 0.5)
+        f_momento_rel.move_to(RIGHT * 2.5 + DOWN * 1)
+
+        grupo_formulas = VGroup(f_mecanica, f_relatividade, f_momento_rel)
+
+        # Breve Linha do Tempo da Física
+        linha_tempo = Line(start=LEFT * 1, end=RIGHT * 5, color=WHITE).move_to(DOWN * 2.3)
+        p1 = Dot(point=linha_tempo.get_start(), color=BLUE)
+        p2 = Dot(point=linha_tempo.get_end(), color=YELLOW)
+        
+        lbl_p1 = Text("Física Clássica\n(Newton)", font_size=14, color=BLUE).next_to(p1, DOWN * 0.5)
+        lbl_p2 = Text("Física Moderna\n(Einstein)", font_size=14, color=YELLOW).next_to(p2, DOWN * 0.5)
+
+        grupo_linha = VGroup(linha_tempo, p1, p2, lbl_p1, lbl_p2)
+
+        # ==========================================
+        # 2. ANIMAÇÃO E TEMPO ESTIMADO (25–30 Segundos)
+        # ==========================================
+
+        # TRANSIÇÃO DE ENTRADA (Retorno da Cena 8)
+        self.play(FadeIn(grupo_quadro), run_time=1.5)
+        self.play(FadeIn(avatar_einstein, target_position=LEFT * 3.5 + DOWN * 0.5), run_time=1.5)
+        self.wait(1)
+
+        # NARRAÇÃO: "Albert Einstein não foi o responsável pela criação da teoria das colisões..."
+        # Animação da Física Clássica surgindo no quadro
+        self.play(Write(f_mecanica), run_time=2.0)
+        self.wait(2)
+
+        # NARRAÇÃO: "...Porém, seus trabalhos fazem parte do desenvolvimento da Física Moderna..."
+        # Destaque para a Física Moderna e Linha do Tempo
+        self.play(
+            Write(f_relatividade),
+            Write(f_momento_rel),
+            Create(grupo_linha),
+            run_time=3.5
+        )
+
+        # Brilho de destaque na fórmula da relatividade
+        self.play(Indicate(f_relatividade, color=GOLD), run_time=1.5)
+
+        # Pausa para sincronização completa com a locução (~12 segundos)
+        self.wait(12)
+
+        # TRANSIÇÃO DE SAÍDA (Sumindo para retornar aos carrinhos na Cena 10)
+        self.play(
+            FadeOut(avatar_einstein),
+            FadeOut(grupo_formulas),
+            FadeOut(grupo_linha),
+            FadeOut(grupo_quadro),
+            run_time=2.0
+        )
+        self.wait(1)
+
+###Cena 10
+from manim import *
+
+class Cena10Conclusao(Scene):
+    def construct(self):
+        # ==========================================
+        # 1. ELEMENTOS VISUAIS
+        # ==========================================
+
+        # Fundo: Quadro Negro da Sala de Aula
+        quadro = Rectangle(width=12, height=6.5, color=DARK_GRAY, fill_opacity=0.9)
+        borda_quadro = Rectangle(width=12.4, height=6.9, color=WOOD_BROWN, stroke_width=10)
+        grupo_quadro = VGroup(quadro, borda_quadro)
+
+        # Reaparecimento dos dois carrinhos de brinquedo
+        carrinho1 = RoundedRectangle(corner_radius=0.1, width=1.2, height=0.6, color=RED, fill_opacity=0.9)
+        rodas1 = VGroup(
+            Circle(radius=0.12, color=WHITE, fill_opacity=1).move_to(carrinho1.get_corner(DL) + RIGHT * 0.2),
+            Circle(radius=0.12, color=WHITE, fill_opacity=1).move_to(carrinho1.get_corner(DR) + LEFT * 0.2)
+        )
+        grupo_carrinho1 = VGroup(carrinho1, rodas1).move_to(LEFT * 2.5 + DOWN * 2.2)
+
+        carrinho2 = RoundedRectangle(corner_radius=0.1, width=1.2, height=0.6, color=BLUE, fill_opacity=0.9)
+        rodas2 = VGroup(
+            Circle(radius=0.12, color=WHITE, fill_opacity=1).move_to(carrinho2.get_corner(DL) + RIGHT * 0.2),
+            Circle(radius=0.12, color=WHITE, fill_opacity=1).move_to(carrinho2.get_corner(DR) + LEFT * 0.2)
+        )
+        grupo_carrinho2 = VGroup(carrinho2, rodas2).move_to(RIGHT * 2.5 + DOWN * 2.2)
+
+        # Fluxograma dos Conceitos (um por vez conforme o roteiro)
+        t1 = Text("COLISÃO", font_size=26, weight=BOLD, color=YELLOW)
+        s1 = MathTex(r"\downarrow", font_size=32, color=WHITE)
+        t2 = Text("MOMENTO LINEAR", font_size=26, weight=BOLD, color=WHITE)
+        s2 = MathTex(r"\downarrow", font_size=32, color=WHITE)
+        t3 = Text("ENERGIA CINÉTICA", font_size=26, weight=BOLD, color=WHITE)
+        s3 = MathTex(r"\downarrow", font_size=32, color=WHITE)
+        t4 = Text("CONSERVAÇÃO", font_size=26, weight=BOLD, color=GREEN)
+
+        fluxo = VGroup(t1, s1, t2, s2, t3, s3, t4).arrange(DOWN, buff=0.18)
+        fluxo.move_to(UP * 0.2)
+
+        # Tela Final (exatamente conforme o roteiro)
+        titulo_final = Text("COLISÃO ELÁSTICA EM 1D", font_size=38, weight=BOLD, color=YELLOW)
+        grupo_final = Text("Grupo Albert Einstein", font_size=28, color=WHITE)
+        ano_final = Text("2026", font_size=24, color=GRAY_A)
+
+        creditos = VGroup(titulo_final, grupo_final, ano_final).arrange(DOWN, buff=0.4)
+
+        # ==========================================
+        # 2. SEQUÊNCIA DA ANIMAÇÃO (30 SEGUNDOS)
+        # ==========================================
+
+        # Entrada da cena: Quadro e os dois carrinhos aparecem
+        self.play(FadeIn(grupo_quadro), run_time=1.0)
+        self.play(
+            FadeIn(grupo_carrinho1, shift=RIGHT * 0.5),
+            FadeIn(grupo_carrinho2, shift=LEFT * 0.5),
+            run_time=1.2
+        )
+        self.wait(1.0)
+
+        # NARRAÇÃO: “Uma colisão pode parecer apenas um simples choque...”
+        # Surgimento sequencial do fluxograma no quadro
+        self.play(Write(t1), run_time=0.8)
+        self.play(FadeIn(s1), Write(t2), run_time=1.2)
+        self.play(FadeIn(s2), Write(t3), run_time=1.2)
+        self.play(FadeIn(s3), Write(t4), run_time=1.2)
+
+        # Movimento sutil dos carrinhos ao fundo durante a explicação
+        self.play(
+            grupo_carrinho1.animate.move_to(LEFT * 1.2 + DOWN * 2.2),
+            grupo_carrinho2.animate.move_to(RIGHT * 1.2 + DOWN * 2.2),
+            run_time=2.0
+        )
+
+        # Pausa para concluir a narração sobre momento linear e energia cinética
+        self.wait(7.0)
+
+        # Transição para a Tela Final
+        self.play(
+            FadeOut(fluxo),
+            FadeOut(grupo_carrinho1),
+            FadeOut(grupo_carrinho2),
+            run_time=1.5
+        )
+
+        # Exibição da Tela Final (Título, Grupo e Ano 2026)
+        self.play(FadeIn(creditos, shift=UP * 0.2), run_time=2.0)
+        self.wait(7.0)
+
+        # Encerramento total
+        self.play(
+            FadeOut(creditos),
+            FadeOut(grupo_quadro),
+            run_time=1.5
+        )
+        self.wait(1.0)
