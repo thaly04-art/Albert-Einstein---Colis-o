@@ -1,3 +1,145 @@
+###código cena 6
+
+from manim import *
+
+class Cena6EnergiaCinetica(Scene):
+    def construct(self):
+        # ---------------------------------------------------
+        # 1. Configuração do Cenário (Chão e Carrinhos)
+        # ---------------------------------------------------
+        chao = Line(LEFT * 7, RIGHT * 7, color=WHITE).shift(DOWN * 2.5)
+        self.add(chao)
+
+        def criar_carrinho(cor, texto, posicao):
+            corpo = Rectangle(width=1.5, height=0.8, color=cor, fill_opacity=0.8)
+            roda1 = Circle(radius=0.2, color=GRAY, fill_opacity=1).shift(DOWN * 0.4 + LEFT * 0.4)
+            roda2 = Circle(radius=0.2, color=GRAY, fill_opacity=1).shift(DOWN * 0.4 + RIGHT * 0.4)
+            label = MathTex(texto).move_to(corpo.get_center())
+            carrinho = VGroup(corpo, roda1, roda2, label).move_to(posicao)
+            return carrinho
+
+        carrinho1 = criar_carrinho(BLUE, "m_1", LEFT * 4 + DOWN * 1.9)
+        carrinho2 = criar_carrinho(RED, "m_2", RIGHT * 4 + DOWN * 1.9)
+        
+        self.play(FadeIn(carrinho1, carrinho2))
+
+        # ---------------------------------------------------
+        # 2. Einstein e o Quadro Negro
+        # ---------------------------------------------------
+        quadro = Rectangle(width=12, height=5, color=DARK_BROWN, fill_color=BLACK, fill_opacity=0.8)
+        quadro.to_edge(UP, buff=0.2)
+        
+        einstein = Tex("Albert Einstein", color=YELLOW).scale(0.8).to_corner(UL)
+        
+        self.play(FadeIn(quadro), Write(einstein))
+        self.wait(1)
+
+        # ---------------------------------------------------
+        # 3. Textos e Barras de Energia "ANTES"
+        # ---------------------------------------------------
+        titulo_antes = Text("ANTES DA COLISÃO", font_size=24, color=WHITE).move_to(quadro.get_center() + UP*1.5 + LEFT*3)
+        eq_antes = MathTex("Ec_1", "+", "Ec_2").next_to(titulo_antes, DOWN)
+        eq_antes.set_color_by_tex("Ec_1", BLUE)
+        eq_antes.set_color_by_tex("Ec_2", RED)
+
+        # Criando as barras empilhadas para o "Antes"
+        barra_antes_1 = Rectangle(width=0.8, height=2.0, color=BLUE, fill_opacity=0.8)
+        barra_antes_2 = Rectangle(width=0.8, height=1.0, color=RED, fill_opacity=0.8)
+        barra_antes_2.next_to(barra_antes_1, UP, buff=0)
+        grupo_barras_antes = VGroup(barra_antes_1, barra_antes_2).next_to(eq_antes, DOWN, buff=0.5)
+
+        self.play(Write(titulo_antes), Write(eq_antes))
+        self.play(GrowFromEdge(barra_antes_1, DOWN), GrowFromEdge(barra_antes_2, DOWN))
+        self.wait(2) # Pausa para a narração
+
+        # Simulação rápida da colisão nos carrinhos embaixo
+        self.play(
+            carrinho1.animate.shift(RIGHT * 3),
+            carrinho2.animate.shift(LEFT * 3),
+            run_time=1
+        )
+        impacto = Flash(DOWN * 1.9, color=YELLOW, line_length=0.5, num_lines=10)
+        self.play(impacto, run_time=0.5)
+        self.play(
+            carrinho1.animate.shift(LEFT * 1.5),
+            carrinho2.animate.shift(RIGHT * 2.5),
+            run_time=1
+        )
+
+        # ---------------------------------------------------
+        # 4. Textos e Barras de Energia "DEPOIS"
+        # ---------------------------------------------------
+        titulo_depois = Text("DEPOIS DA COLISÃO", font_size=24, color=WHITE).move_to(quadro.get_center() + UP*1.5 + RIGHT*3)
+        eq_depois = MathTex("Ec_1'", "+", "Ec_2'").next_to(titulo_depois, DOWN)
+        eq_depois.set_color_by_tex("Ec_1'", BLUE)
+        eq_depois.set_color_by_tex("Ec_2'", RED)
+
+        # Barras empilhadas "Depois" (A altura de cada uma muda, mas a soma [3.0] é a mesma)
+        barra_depois_1 = Rectangle(width=0.8, height=1.0, color=BLUE, fill_opacity=0.8)
+        barra_depois_2 = Rectangle(width=0.8, height=2.0, color=RED, fill_opacity=0.8)
+        barra_depois_2.next_to(barra_depois_1, UP, buff=0)
+        grupo_barras_depois = VGroup(barra_depois_1, barra_depois_2).next_to(eq_depois, DOWN, buff=0.5)
+
+        self.play(Write(titulo_depois), Write(eq_depois))
+        self.play(GrowFromEdge(barra_depois_1, DOWN), GrowFromEdge(barra_depois_2, DOWN))
+        self.wait(2)
+
+        # ---------------------------------------------------
+        # 5. Igualdade da Energia Total
+        # ---------------------------------------------------
+        # Linha pontilhada conectando o topo das barras para provar que a altura total é igual
+        linha_comparacao = DashedLine(
+            start=grupo_barras_antes.get_corner(UR),
+            end=grupo_barras_depois.get_corner(UL),
+            color=YELLOW
+        )
+        self.play(Create(linha_comparacao))
+
+        eq_total = Text("Ec total inicial = Ec total final", font_size=30, color=YELLOW)
+        eq_total.move_to(quadro.get_center() + DOWN * 0.5)
+        
+        self.play(Write(eq_total))
+        self.wait(3) # "Isso significa que, no modelo ideal..."
+
+        # ---------------------------------------------------
+        # 6. Fórmula Completa
+        # ---------------------------------------------------
+        formula_completa = MathTex(
+            "\\frac{1}{2}m_1v_1^2", "+", "\\frac{1}{2}m_2v_2^2", 
+            "=", 
+            "\\frac{1}{2}m_1v_1'^2", "+", "\\frac{1}{2}m_2v_2'^2"
+        ).scale(0.9).next_to(eq_total, DOWN, buff=0.5)
+
+        formula_completa.set_color_by_tex("m_1", BLUE)
+        formula_completa.set_color_by_tex("m_2", RED)
+
+        self.play(Write(formula_completa), run_time=3)
+        self.wait(4) # Pausa final da explicação de Einstein
+
+        # ---------------------------------------------------
+        # 7. Transição
+        # ---------------------------------------------------
+        # "As barras de energia permanecem com o mesmo tamanho e a tela muda..."
+        # Vamos agrupar as barras e desvanecer o resto do cenário.
+        
+        elementos_para_sumir = VGroup(
+            chao, carrinho1, carrinho2, quadro, einstein, 
+            titulo_antes, eq_antes, titulo_depois, eq_depois, 
+            eq_total, formula_completa, linha_comparacao
+        )
+
+        self.play(FadeOut(elementos_para_sumir, run_time=1.5))
+        
+        # Move as barras para o centro da tela para iniciar a próxima cena
+        self.play(
+            grupo_barras_antes.animate.move_to(LEFT * 2),
+            grupo_barras_depois.animate.move_to(RIGHT * 2),
+            run_time=2
+        )
+        self.wait(1)
+
+
+
 ###Código cena 7
 
 from manim import *
