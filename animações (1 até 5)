@@ -1,7 +1,6 @@
 ###Código da cena 1 [temporário]
 
 from manim import *
-
 # Configuração de exibição
 config.media_width = "80%"
 config.verbosity = "WARNING"
