@@ -202,6 +202,7 @@ Dois corpos se chocam e permanecem juntos.
 - Texto:
 Momento linear conservado;
 Energia cinética não é conservada.
+https://drive.google.com/file/d/1rQ6NM0g_sfzuAypLkEGEGtUMr_UhLRyq/view?usp=drive_link
 
 Narração:
 “É importante não confundir uma colisão elástica com uma colisão inelástica. Na colisão elástica ideal,
@@ -248,6 +249,7 @@ E em seguida:
 
 Transição:
 A cena volta para Einstein na sala de aula.
+https://drive.google.com/file/d/18PVQK0X0dv6hm8jjwTn7UJVsTIdOI6ql/view?usp=drive_link
 
 CENA 9 — RELAÇÃO COM ALBERT EINSTEIN
 Tempo estimado: 25–30 segundos
