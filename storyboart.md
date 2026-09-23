@@ -1,6 +1,6 @@
-STORYBOARD — CENAS 1 A 5
+# STORYBOARD — CENAS 1 A 5
 
-CENA 1 — INTRODUÇÃO
+# CENA 1 — INTRODUÇÃO
 
 Tempo estimado: 25 segundos
 
@@ -25,11 +25,12 @@ Elementos visuais:
 Transição:
 Os carrinhos começam a se movimentar em direção um ao outro.
 Feito no código: quadro negro com os carrinhos colidindo.
-O que falta: Albert Einstein e título.
-link da animação feita pelo Canva: https://canva.link/9prdv2soljdwdv7
+
+Link da animação feita pelo Canva: https://canva.link/9prdv2soljdwdv7
+
 ---
 
-CENA 2 — ANTES DA COLISÃO
+# CENA 2 — ANTES DA COLISÃO
 
 Tempo estimado: 30 segundos
 
@@ -54,13 +55,12 @@ Elementos visuais:
 Transição:
 Os carrinhos continuam se aproximando enquanto a câmera destaca um dos corpos.
 Feito no código: Quadro negro com carrinhos, massas e setas.
-O que falta: Einstein e fórmula.
 
-link da animação feita pelo Canva: https://canva.link/pestzyr5p3ut8cm
+Link da animação feita pelo Canva: https://canva.link/pestzyr5p3ut8cm
 
 ---
 
-CENA 3 — MOMENTO LINEAR
+# CENA 3 — MOMENTO LINEAR
 
 Tempo estimado: 30–35 segundos
 
@@ -87,9 +87,11 @@ Elementos visuais:
 Transição:
 Os carrinhos continuam se aproximando até ficarem próximos do momento da colisão.
 
+Link da animação feita pelo Canva: https://canva.link/pestzyr5p3ut8cm
+
 ---
 
-CENA 4 — A COLISÃO
+# CENA 4 — A COLISÃO
 
 Tempo estimado: 25–30 segundos
 
@@ -115,11 +117,11 @@ Elementos visuais:
 Transição:
 A animação continua e os carrinhos começam a se afastar após o impacto.
 
-https://einstein-cart-lab.lovable.app/
+ Link da animação: https://einstein-cart-lab.lovable.app/
 
 ---
 
-CENA 5 — APÓS A COLISÃO
+# CENA 5 — APÓS A COLISÃO
 
 Tempo estimado: 30–35 segundos
 
@@ -148,11 +150,13 @@ Elementos visuais:
 Transição:
 A câmera volta para Einstein, que passa a explicar o comportamento da energia cinética após a colisão.
 
-https://einstein-cart-lab.lovable.app/
+ Link da animação: https://einstein-cart-lab.lovable.app/
 
-STORYBOARD - CENAS 6 a 10
+ ---
 
-CENA 6 — CONSERVAÇÃO DA ENERGIA CINÉTICA
+# STORYBOARD - CENAS 6 a 10
+
+# CENA 6 — CONSERVAÇÃO DA ENERGIA CINÉTICA
 Tempo estimado: 40–45 segundos
 
 Visual:
@@ -187,7 +191,7 @@ https://animate-physics.lovable.app
 
 ---
 
-CENA 7 — COLISÃO ELÁSTICA × INELÁSTICA
+# CENA 7 — COLISÃO ELÁSTICA × INELÁSTICA
 Tempo estimado: 35–40 segundos
 
 Visual:
@@ -202,7 +206,6 @@ Dois corpos se chocam e permanecem juntos.
 - Texto:
 Momento linear conservado;
 Energia cinética não é conservada.
-https://drive.google.com/file/d/1rQ6NM0g_sfzuAypLkEGEGtUMr_UhLRyq/view?usp=drive_link
 
 Narração:
 “É importante não confundir uma colisão elástica com uma colisão inelástica. Na colisão elástica ideal,
@@ -221,9 +224,11 @@ Elementos visuais:
 Transição:
 A parte da colisão elástica é destacada e a cena passa para um exemplo do cotidiano.
 
+https://drive.google.com/file/d/1rQ6NM0g_sfzuAypLkEGEGtUMr_UhLRyq/view?usp=drive_link
+
 ---
 
-CENA 8 — EXEMPLO DO COTIDIANO
+# CENA 8 — EXEMPLO DO COTIDIANO
 Tempo estimado: 25–30 segundos
 
 Visual:
@@ -249,9 +254,12 @@ E em seguida:
 
 Transição:
 A cena volta para Einstein na sala de aula.
+
 https://drive.google.com/file/d/18PVQK0X0dv6hm8jjwTn7UJVsTIdOI6ql/view?usp=drive_link
 
-CENA 9 — RELAÇÃO COM ALBERT EINSTEIN
+---
+
+# CENA 9 — RELAÇÃO COM ALBERT EINSTEIN
 Tempo estimado: 25–30 segundos
 
 Visual:
@@ -273,7 +281,7 @@ Einstein desaparece e a imagem volta para os dois carrinhos.
 
 ---
 
-CENA 10 — CONCLUSÃO
+# CENA 10 — CONCLUSÃO
 Tempo estimado: 30 segundos
 
 Visual:
@@ -306,3 +314,5 @@ Elementos visuais:
 
 Transição:
 Finalização do vídeo.
+
+---
