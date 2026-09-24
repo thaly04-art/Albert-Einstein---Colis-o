@@ -83,15 +83,14 @@ A organização do projeto foi realizada por meio de um *Dashboard Kanban*, perm
 ### 📌 Primeiro registro
 
 ![Kanban - início](LINK OU IMAGEM DO PRINT)
-<img width="1599" height="747" alt="712ecbb8-6967-4785-9ebd-914d9872763d" src="https://github.com/user-attachments/assets/2c08fa8f-1a4e-4290-ac0b-a786f0e13795" />
-
-Registro do andamento do projeto em [DATA].
+<img width="1341" height="901" alt="Captura de tela 2026-09-24 203255" src="https://github.com/user-attachments/assets/c3aa7095-39ee-4fc8-b6d7-b3e0972c18ab" />
+Registro do andamento do projeto em [14/09].
 
 ### 📌 Segundo registro
 
 ![Kanban - andamento](LINK OU IMAGEM DO PRINT)
-
-Registro do andamento do projeto em [DATA].
+<img width="1384" height="717" alt="712ecbb8-6967-4785-9ebd-914d9872763d" src="https://github.com/user-attachments/assets/2d3b360e-639d-4167-82af-3bbdc1db0e96" />
+Registro do andamento do projeto em [23/09].
 
 ### 📌 Terceiro registro
 
