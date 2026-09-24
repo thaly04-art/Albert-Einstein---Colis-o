@@ -270,7 +270,7 @@ Elementos visuais:
 
 Transição:
 Einstein desaparece e a imagem volta para os dois carrinhos.
-
+https://drive.google.com/file/d/1e8I3RDqL1RRT_2ZMEwwZPyz-OW4SLHRm/view?usp=drive_link
 ---
 
 CENA 10 — CONCLUSÃO
@@ -306,3 +306,4 @@ Elementos visuais:
 
 Transição:
 Finalização do vídeo.
+https://drive.google.com/file/d/1l0_O_4bZl9-UC7vqI2-r-uJqAUOqY7Dp/view?usp=drive_link
