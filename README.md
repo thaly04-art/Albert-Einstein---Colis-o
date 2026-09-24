@@ -83,13 +83,13 @@ A organização do projeto foi realizada por meio de um *Dashboard Kanban*, perm
 ### 📌 Primeiro registro
 
 ![Kanban - início](LINK OU IMAGEM DO PRINT)
-<img width="1341" height="901" alt="Captura de tela 2026-09-24 203255" src="https://github.com/user-attachments/assets/c3aa7095-39ee-4fc8-b6d7-b3e0972c18ab" />
+<img width="1350" height="902" alt="Captura de tela 2026-09-24 204329" src="https://github.com/user-attachments/assets/64fd9c0f-2a33-4201-aa84-6ffe2f8846be" />
 Registro do andamento do projeto em [14/09].
 
 ### 📌 Segundo registro
 
 ![Kanban - andamento](LINK OU IMAGEM DO PRINT)
-<img width="1384" height="717" alt="712ecbb8-6967-4785-9ebd-914d9872763d" src="https://github.com/user-attachments/assets/2d3b360e-639d-4167-82af-3bbdc1db0e96" />
+<img width="1342" height="897" alt="Captura de tela 2026-09-24 205025" src="https://github.com/user-attachments/assets/39b73815-5c3c-43cd-931e-578d8c5bf15d" />
 Registro do andamento do projeto em [23/09].
 
 ### 📌 Terceiro registro
@@ -117,7 +117,7 @@ Abaixo está o registro das visualizações do vídeo nos primeiros 7 dias após
 Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 
 ### Thalyta
-[DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
+[Divulgando para a família.]
 
 ### Julia
 [DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
