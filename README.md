@@ -14,7 +14,7 @@ e da busca por compreender os fenômenos físicos presentes no nosso cotidiano.
 # Integrantes:
 
 - Thalyta [FERREIRA] — Matrícula: [202520590011]
-- Julia [SOBRENOME] — Matrícula: [MATRÍCULA]
+- Julia [NASCIMENTO] — Matrícula: [2020520656911]
 - Gabriel R. [SOBRENOME] — Matrícula: [MATRÍCULA]
 - Felipe R. [SOBRENOME] — Matrícula: [MATRÍCULA]
 
@@ -120,7 +120,7 @@ Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 [Divulgando para a família.]
 
 ### Julia
-[DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
+[Divulgação para a familia, amigos e nas redes sociais.]
 
 ### Gabriel
 [DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
