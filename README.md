@@ -1,4 +1,3 @@
- Link do Project Board:https://github.com/users/thaly04-art/projects/1
 # Colisão Elástica em 1D: 
 
 # Grupo: Albert Einstein  
@@ -82,19 +81,19 @@ A organização do projeto foi realizada por meio de um *Dashboard Kanban*, perm
 
 ### 📌 Primeiro registro
 
-![Kanban - início](LINK OU IMAGEM DO PRINT)
+![Kanban - início]
 <img width="1350" height="902" alt="Captura de tela 2026-09-24 204329" src="https://github.com/user-attachments/assets/64fd9c0f-2a33-4201-aa84-6ffe2f8846be" />
 Registro do andamento do projeto em [14/09].
 
 ### 📌 Segundo registro
 
-![Kanban - andamento](LINK OU IMAGEM DO PRINT)
+![Kanban - andamento]
 <img width="1342" height="897" alt="Captura de tela 2026-09-24 205025" src="https://github.com/user-attachments/assets/39b73815-5c3c-43cd-931e-578d8c5bf15d" />
 Registro do andamento do projeto em [23/09].
 
 ### 📌 Terceiro registro
 
-![Kanban - final](LINK OU IMAGEM DO PRINT)
+![Kanban - final]
 <img width="1350" height="820" alt="Captura de tela 2026-09-25 222900" src="https://github.com/user-attachments/assets/c639220c-aecd-44b8-b123-761b4b3296ee" />
 Registro do andamento do projeto em [28/09].
 
