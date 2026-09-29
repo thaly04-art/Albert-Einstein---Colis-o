@@ -13,10 +13,10 @@ e da busca por compreender os fenômenos físicos presentes no nosso cotidiano.
 
 # Integrantes:
 
-- Thalyta [FERREIRA] — Matrícula: [202520590011]
-- Julia [NASCIMENTO] — Matrícula: [2020520656911]
-- Gabriel R. [SOBRENOME] — Matrícula: [MATRÍCULA]
-- Felipe R. [SOBRENOME] — Matrícula: [MATRÍCULA]
+- Thalyta — Matrícula: [202520590011]
+- Julia — Matrícula: [2020520656911]
+- Gabriel R. — Matrícula: [202520590611]
+- Felipe R.  — Matrícula: [202610075411]
 
  # Biografia de Albert Einstein:
 
@@ -95,8 +95,8 @@ Registro do andamento do projeto em [23/09].
 ### 📌 Terceiro registro
 
 ![Kanban - final](LINK OU IMAGEM DO PRINT)
-
-Registro do andamento do projeto em [DATA].
+<img width="1350" height="820" alt="Captura de tela 2026-09-25 222900" src="https://github.com/user-attachments/assets/c639220c-aecd-44b8-b123-761b4b3296ee" />
+Registro do andamento do projeto em [28/09].
 
 ---
 
