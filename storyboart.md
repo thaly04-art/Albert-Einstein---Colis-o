@@ -12,8 +12,8 @@ COLISÃO ELÁSTICA EM UMA DIMENSÃO (1D) ENTRE DOIS CORPOS
 Albert Einstein aparece apresentando o tema e os dois carrinhos.
 
 Narração:
-«"Boa tarde, meu nome é Albert Einstein e hoje vamos compreender o que são as colisões. De forma mais específica,
-veremos as colisões elásticas em uma dimensão de forma prática, com esses dois carrinhos."»
+«"Boa tarde! O meu nome é Albert Einstein e hoje vamos entender melhor como funcionam as colisões. De forma mais específica, vamos ver como acontecem as colisões elásticas numa única dimensão. 
+Para ser tudo muito simples e prático, vamos usar estes dois carrinhos para demonstrar o que acontece na hora do impacto."»
 
 Elementos visuais:
 - Albert Einstein
