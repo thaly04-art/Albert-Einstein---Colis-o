@@ -125,7 +125,7 @@ Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 [DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
 
 ### Felipe
-[DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
+[Produção de conteúdo via instagram]
 
 # Reprodução da Animação Localmente:
 
