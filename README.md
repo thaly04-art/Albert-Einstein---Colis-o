@@ -37,7 +37,7 @@ apresentar os conceitos físicos de maneira didática e visual por meio de uma a
 
 # Vídeo do Projeto
 
-*Vídeo:* [LINK DO VÍDEO NO YOUTUBE]
+*Vídeo:* [https://youtu.be/jcvOUlMWviY?is=mfprRwZ9fKnYqrxU]
 
 # Resumo da Física Abordada:
 
@@ -129,19 +129,17 @@ Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 
 # Reprodução da Animação Localmente:
 
-A animação foi produzida utilizando [CANVA / OUTRA FERRAMENTA].
+A animação foi produzida utilizando [CANVA / LOVABLE].
 
 Para assistir à versão final da animação, acesse o vídeo publicado no canal da disciplina no YouTube:
 
-*[LINK DO VÍDEO]*
-
-[SE HOUVER UMA FORMA DE EXECUTAR LOCALMENTE, COLOCAR AS INSTRUÇÕES AQUI.]
+*[https://youtu.be/jcvOUlMWviY?is=mfprRwZ9fKnYqrxU]*
 
 ---
 
 # Canal da Disciplina
 
-*Canal da disciplina no YouTube:* [LINK DO CANAL]
+*Canal da disciplina no YouTube:* [https://www.youtube.com/@fisicanatela]
 
 ---
 
