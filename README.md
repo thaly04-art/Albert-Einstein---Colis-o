@@ -122,7 +122,7 @@ Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 [Divulgação para a familia, amigos e nas redes sociais.]
 
 ### Gabriel Rabelo da Silva 
-[DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
+[Divulgação em páginas e vídeos associados ao tema, grupos e para amigos.]
 
 ### Felipe Ronaldo Pereira da Cunha Sousa
 [Produção de conteúdo via instagram]
