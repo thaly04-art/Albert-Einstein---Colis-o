@@ -115,16 +115,16 @@ Abaixo está o registro das visualizações do vídeo nos primeiros 7 dias após
 
 Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 
-### Thalyta
+### Thalyta Costa Jotta Ferreira
 [Divulgando para a família.]
 
-### Julia
+### Julia do Nascimento Rocha
 [Divulgação para a familia, amigos e nas redes sociais.]
 
-### Gabriel
+### Gabriel Rabelo da Silva 
 [DESCREVER O QUE FOI FEITO PARA DIVULGAR O VÍDEO.]
 
-### Felipe
+### Felipe Ronaldo Pereira da Cunha Sousa
 [Produção de conteúdo via instagram]
 
 # Reprodução da Animação Localmente:
