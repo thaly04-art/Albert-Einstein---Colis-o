@@ -12,10 +12,10 @@ e da busca por compreender os fenômenos físicos presentes no nosso cotidiano.
 
 # Integrantes:
 
-- Thalyta — Matrícula: [202520590011]
-- Julia — Matrícula: [2020520656911]
-- Gabriel R. — Matrícula: [202520590611]
-- Felipe R.  — Matrícula: [202610075411]
+- Thalyta Costa Jotta Ferreira — Matrícula: [202520590011]
+- Julia do Nascimento Rocha — Matrícula: [2020520656911]
+- Gabriel Rabelo da Silva — Matrícula: [202520590611]
+- Felipe Ronaldo Pereira da Cunha Sousa — Matrícula: [202610075411]
 
  # Biografia de Albert Einstein:
 
@@ -115,16 +115,16 @@ Abaixo está o registro das visualizações do vídeo nos primeiros 7 dias após
 
 Cada integrante participou da divulgação do vídeo conforme descrito abaixo:
 
-### Thalyta Costa Jotta Ferreira
+Thalyta 
 [Divulgando para a família.]
 
-### Julia do Nascimento Rocha
-[Divulgação para a familia, amigos e nas redes sociais.]
+ Julia 
+[Divulgação para a família amigos e nas redes sociais.]
 
-### Gabriel Rabelo da Silva 
+ Gabriel R.
 [Divulgação em páginas e vídeos associados ao tema, grupos e para amigos.]
 
-### Felipe Ronaldo Pereira da Cunha Sousa
+ Felipe Ronaldo 
 [Produção de conteúdo via instagram]
 
 # Reprodução da Animação Localmente:
