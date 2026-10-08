@@ -103,7 +103,7 @@ Registro do andamento do projeto em [28/09].
 
 Abaixo está o registro das visualizações do vídeo nos primeiros 7 dias após sua publicação.
 
-![YouTube Analyticshttps://youtu.be/jcvOUlMWviY?is=jy7QI5k9vf6JJnUx
+![YouTube Analytics] [https://youtu.be/jcvOUlMWviY?is=jy7QI5k9vf6JJnUx]
 
 *Número de visualizações em 7 dias:* [544]
 
