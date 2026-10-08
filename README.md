@@ -103,11 +103,11 @@ Registro do andamento do projeto em [28/09].
 
 Abaixo está o registro das visualizações do vídeo nos primeiros 7 dias após sua publicação.
 
-![YouTube Analytics](LINK OU IMAGEM DO PRINT)
+![YouTube Analyticshttps://youtu.be/jcvOUlMWviY?is=jy7QI5k9vf6JJnUx
 
-*Número de visualizações em 7 dias:* [NÚMERO DE VISUALIZAÇÕES]
+*Número de visualizações em 7 dias:* [544]
 
-*Período analisado:* [DATA INICIAL] a [DATA FINAL]
+*Período analisado:* [01/10] a [08/10]
 
 ---
 
